@@ -5,66 +5,63 @@
 <title>Walker Tape Kiosk</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 <style>
-	body {
-    	font-family: 'Open Sans', sans-serif; /* Open Sans Regular for standard copy. */
-    	font-size: 1rem; /* Standard size for body text. */
-   	line-height: 1.75; /* Enhanced readability for body text. */
-   	margin: 0 15%; /* Original margin maintained. */
-   	background-color: #7FD6F7; /* Unchanged background color. */
-	}
+    body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1rem;
+        line-height: 1.75;
+        margin: 0 15%;
+        background-color: #7FD6F7;
+    }
 
-	h1, h2, h3 {
-   	font-family: 'Lato', sans-serif; /* Lato for headings. */
-   	text-transform: uppercase; /* All headings in uppercase. */
-	}
+    h1, h2, h3 {
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+    }
 
-	h1 {
-   	 font-weight: 300; /* Lato Light specified for main headings. */
-    	text-align: center;
-    	font-size: 3.50rem; /* Adjust based on design needs. */
-    	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	}
+    h1 {
+        font-weight: 300;
+        text-align: center;
+        font-size: 3.50rem;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
 
-	h2 {
-    	font-weight: 300; /* Assuming Lato Light for primary headings, can adjust for subheadings if necessary. */
-    	text-align: left;
-    	font-size: 1.5rem;
-    	margin-top: 0.75em;
-    	margin-bottom: 0.25em;
-	}
+    h2 {
+        font-weight: 300;
+        text-align: left;
+        font-size: 1.5rem;
+        margin-top: 0.75em;
+        margin-bottom: 0.25em;
+    }
 
-	h3 {
-	font-weight: 300; /* Consistency with Lato Light, italicized for differentiation. */
-	text-align: left;
-	font-style: italic;
-	font-size: 1.25rem;
-	margin-top: 0.5em;
-	margin-bottom: 0.1em;
-	}
-	
-	.iframe-left-align {
-		margin-left: -10%; /* Adjusts the iframe's margin to counteract the body's margin */
-	}
-	
-	.iframe-right-align {
-		margin-right: -10%; /* Adjusts the iframe's margin to counteract the body's margin */
-	}
+    h3 {
+        font-weight: 300;
+        text-align: left;
+        font-style: italic;
+        font-size: 1.25rem;
+        margin-top: 0.5em;
+        margin-bottom: 0.1em;
+    }
+    
+    .iframe-container {
+        display: flex;
+        justify-content: space-between; /* Adjusts the space between the iframes */
+        margin: 0 -15%; /* Counteracts the body's margin, extending to the full width */
+    }
 
-
+    .iframe-container iframe {
+        flex-grow: 1; /* Allows the iframes to grow and fill the container */
+        width: 50%; /* Starts with half the container's width, but can be adjusted */
+    }
 </style>
 </head>
 <body>
-	<h1>Welcome to Walker Tape!</h1>
-	<hr>
-	<h2>Please Note: All Visitors Must Sign In</h2>
-	
-	<iframe class="iframe-left-align" width="400px" height="720px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=Q3-SLcijuUG-Hm7U1ru5fsNVKv7Vky1Lg3ugpkNc7GpUNTFZTDA0R0pFSkpCTFQ4TzVFRDM0QUcxVi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-	
-
-	<h2>Additionally: Anyone who wishes to visit employee-only areas must also sign a nondisclosure agreement.</h2>
-	<iframe width="400px" height="720px" src="https://powerforms.docusign.net/65691a2e-8a97-4672-a4d0-4dfe93a0babb?env=na3&acct=5cea2cf0-f181-4295-96a0-014a20ab64a7&accountId=5cea2cf0-f181-4295-96a0-014a20ab64a7" frameborder="0"></iframe>
-
-	
+    <h1>Welcome to Walker Tape!</h1>
+    <hr>
+    <div class="iframe-container">
+        <iframe width="400px" height="720px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=Q3-SLcijuUG-Hm7U1ru5fsNVKv7Vky1Lg3ugpkNc7GpUNTFZTDA0R0pFSkpCTFQ4TzVFRDM0QUcxVi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
+        <iframe width="400px" height="720px" src="https://powerforms.docusign.net/65691a2e-8a97-4672-a4d0-4dfe93a0babb?env=na3&acct=5cea2cf0-f181-4295-96a0-014a20ab64a7&accountId=5cea2cf0-f181-4295-96a0-014a20ab64a7" frameborder="0"></iframe>
+    </div>
+    <h2>Additionally: Anyone who wishes to visit employee-only areas must also sign a nondisclosure agreement.</h2>
 </body>
 </html>
