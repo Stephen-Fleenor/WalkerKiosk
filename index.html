@@ -3,60 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title>Walker Tape Kiosk</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Open+Sans" rel="stylesheet">
     <style>
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(to bottom, #00adef 0%, #00adef 60%, #f2f2f2 60%);
             color: #333;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             height: 100vh;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin: 0.5rem;
+        .logo-header {
+            width: 100%;
+            background-color: #2D3192;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-header img {
+            max-width: 90%;
+            height: auto;
         }
 
         .iframe-container {
             display: flex;
             justify-content: center;
             gap: 20px;
-            width: 90%;
-            max-width: 1200px;
+            width: 95%;
+            margin-top: 1rem;
         }
 
         iframe {
             border: 2px solid #ccc;
             border-radius: 10px;
-            width: 48%;
-            height: 80vh; /* Adjust height to fit within view */
+            width: 49%;
+            height: 60vh; /* Adjusted height */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        .form-description {
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+            width: 49%;
+        }
+
         @media (max-width: 768px) {
-            .iframe-container {
+            .iframe-container, .form-description {
                 flex-direction: column;
-                gap: 15px;
+                width: 90%;
             }
 
-            iframe {
-                width: 90%;
-                height: 40vh; /* Adjust for better mobile viewing */
+            iframe, .form-description {
+                width: 100%;
+                margin-bottom: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Walker Tape!</h1>
+    <div class="logo-header">
+        <!-- Replace 'path-to-your-logo.png' with the actual path to your chosen logo file -->
+        <img src="path-to-your-logo.png" alt="Walker Tape Logo">
+    </div>
     <div class="iframe-container">
         <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=Q3-SLcijuUG-Hm7U1ru5fsNVKv7Vky1Lg3ugpkNc7GpUNTFZTDA0R0pFSkpCTFQ4TzVFRDM0QUcxVi4u&embed=true" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
         <iframe src="https://powerforms.docusign.net/65691a2e-8a97-4672-a4d0-4dfe93a0babb?env=na3&acct=5cea2cf0-f181-4295-96a0-014a20ab64a7&accountId=5cea2cf0-f181-4295-96a0-014a20ab64a7" frameborder="0"></iframe>
+    </div>
+    <div class="form-description">
+        <p>All Visitors Must Sign In</p>
+    </div>
+    <div class="form-description">
+        <p>Those who wish to visit employee only areas must also sign this nondisclosure agreement</p>
     </div>
 </body>
 </html>
