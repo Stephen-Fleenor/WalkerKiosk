@@ -38,28 +38,39 @@
             justify-content: center;
             gap: 20px;
             width: 97%;
-            margin-top: 1rem;
+            margin-top: 50px; /* Increased spacing */
         }
 
         iframe {
             border: 2px solid #ccc;
             border-radius: 10px;
             width: 49%;
-            height: 85vh; /* Adjusted height */
+            height: 75vh; /* Reduced height for buffer */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        
+        .form-description {
+            display: flex;
+            width: 97%;
+            justify-content: space-between;
+            color: white; /* Text color */
+            margin-bottom: 20px; /* Spacing between text and iframes */
+        }
 
         @media (max-width: 768px) {
             .iframe-container, .form-description {
                 flex-direction: column;
-                width: 90%;
+                align-items: center;
             }
 
-            iframe, .form-description {
+            iframe, .form-description div {
                 width: 100%;
                 margin-bottom: 1rem;
+            }
+
+            .form-description {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
@@ -67,6 +78,10 @@
 <body>
     <div class="logo-header">
         <img src="Walker_SecondaryLogo.png" alt="Walker Tape Logo">
+    </div>
+    <div class="form-description">
+        <div>Visitors, please sign in using the form below.</div>
+        <div>If you wish to visit employee-only areas, please also sign below.</div>
     </div>
     <div class="iframe-container">
         <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=Q3-SLcijuUG-Hm7U1ru5fsNVKv7Vky1Lg3ugpkNc7GpUNTFZTDA0R0pFSkpCTFQ4TzVFRDM0QUcxVi4u&embed=true" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
