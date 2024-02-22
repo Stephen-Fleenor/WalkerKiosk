@@ -38,26 +38,32 @@
             justify-content: space-between;
             gap: 20px;
             width: 97%;
-            margin: 30px 0; /* Increased spacing and added bottom margin */
-            padding-bottom: 2rem; /* Additional padding to prevent iframe cut-off */
+            margin: 30px 0;
+            padding-bottom: 2rem;
         }
 
         iframe {
             border: 2px solid #ccc;
             border-radius: 10px;
             width: 49%;
-            height: 60vh; /* Adjusted height */
+            height: 60vh;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .form-description {
-            display: flex;
             width: 97%;
+            display: flex;
             justify-content: space-between;
-            color: white; /* Text color */
-            font-size: 2em; /* Increased font size */
-            margin: 0 auto 20px; /* Centering text and adding spacing */
-            text-align: center; /* Ensures text is centered */
+            align-items: center;
+            margin-bottom: 20px; /* Added for spacing */
+            position: relative; /* New */
+        }
+
+        .form-description div {
+            flex: 1;
+            text-align: center;
+            color: white;
+            font-size: 2em;
         }
 
         @media (max-width: 768px) {
@@ -71,9 +77,8 @@
                 margin-bottom: 1rem;
             }
 
-            .form-description {
-                flex-direction: column;
-                text-align: center;
+            .form-description div {
+                font-size: 1.5em; /* Adjusted for smaller screens */
             }
         }
     </style>
