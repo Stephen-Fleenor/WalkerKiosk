@@ -38,10 +38,9 @@
             justify-content: space-between;
             gap: 20px;
             width: 97%;
-            margin: 15px 0; /* Testing the adjustment here */
+            margin: 15px 0; /* Adjusted margin */
             padding-bottom: 2rem;
-        }    
-
+        }
 
         iframe {
             border: 2px solid #ccc;
@@ -67,6 +66,14 @@
             font-size: 2em;
         }
 
+        /* Adjust the first child div within .form-description */
+        .form-description div:first-child {
+            position: relative;
+            left: -5px; /* Moves text slightly to the left */
+            top: 5px; /* Moves text slightly down */
+        }
+
+        /* Maintain the margin adjustment for the second child */
         .form-description div:nth-child(2) {
             margin-top: 20px; /* Additional margin for the second div */
         }
@@ -75,16 +82,16 @@
             .iframe-container, .form-description {
                 flex-direction: column;
                 align-items: center;
-        }
+            }
 
-        iframe, .form-description div {
+            iframe, .form-description div {
                 width: 100%;
                 margin-bottom: 1rem;
-        }
+            }
 
-        .form-description div {
-            font-size: 1.5em;
-        }
+            .form-description div {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
