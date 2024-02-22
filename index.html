@@ -55,8 +55,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px; /* Added for spacing */
-            position: relative; /* New */
+            margin-bottom: 20px;
+            position: relative;
         }
 
         .form-description div {
@@ -64,6 +64,10 @@
             text-align: center;
             color: white;
             font-size: 2em;
+        }
+
+        .form-description div:nth-child(2) {
+            margin-top: 20px; /* Additional margin for the second div */
         }
 
         @media (max-width: 768px) {
@@ -78,13 +82,8 @@
             }
 
             .form-description div {
-                font-size: 1.5em; /* Adjusted for smaller screens */
+                font-size: 1.5em;
             }
-
-            .employee-visit {
-                margin-top: 20px; /* Adjust this value as needed to lower the text */
-            }
-
         }
     </style>
 </head>
@@ -98,7 +97,7 @@
     </div>
     <div class="iframe-container">
         <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=Q3-SLcijuUG-Hm7U1ru5fsNVKv7Vky1Lg3ugpkNc7GpUNTFZTDA0R0pFSkpCTFQ4TzVFRDM0QUcxVi4u&embed=true" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
-        <div class="employee-visit">If you wish to visit employee-only areas, additionally go through the DocuSign NDA.</div>
+        <iframe src="https://powerforms.docusign.net/65691a2e-8a97-4672-a4d0-4dfe93a0babb?env=na3&acct=5cea2cf0-f181-4295-96a0-014a20ab64a7&accountId=5cea2cf0-f181-4295-96a0-014a20ab64a7" frameborder="0"></iframe>
     </div>
 </body>
 </html>
