@@ -35,17 +35,18 @@
 
         .iframe-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             gap: 20px;
             width: 97%;
-            margin-top: 30px; /* Increased spacing */
+            margin: 30px 0; /* Increased spacing and added bottom margin */
+            padding-bottom: 2rem; /* Additional padding to prevent iframe cut-off */
         }
 
         iframe {
             border: 2px solid #ccc;
             border-radius: 10px;
             width: 49%;
-            height: 60h; /* Reduced height for buffer */
+            height: 75vh; /* Adjusted height */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -54,7 +55,9 @@
             width: 97%;
             justify-content: space-between;
             color: white; /* Text color */
-            margin-bottom: 20px; /* Spacing between text and iframes */
+            font-size: 1.2em; /* Increased font size */
+            margin: 0 auto 20px; /* Centering text and adding spacing */
+            text-align: center; /* Ensures text is centered */
         }
 
         @media (max-width: 768px) {
