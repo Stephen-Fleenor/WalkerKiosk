@@ -29,7 +29,7 @@
         }
 
         .logo-header img {
-            max-width: 50%;
+            max-width: 60%;
             height: auto;
         }
 
@@ -38,7 +38,7 @@
             justify-content: space-between;
             gap: 20px;
             width: 97%;
-            margin: 15px 0; /* Adjusted margin */
+            margin: 15px 0;
             padding-bottom: 2rem;
         }
 
@@ -46,7 +46,7 @@
             border: 2px solid #ccc;
             border-radius: 10px;
             width: 49%;
-            height: 70vh;
+            height: 72vh;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -66,33 +66,31 @@
             font-size: 2em;
         }
 
-        /* Adjust the first child div within .form-description */
         .form-description div:first-child {
             position: relative;
-            left: -5px; /* Moves text slightly to the left */
-            top: 5px; /* Moves text slightly down */
+            left: -5px; 
+            top: 5px; 
         }
 
-        /* Maintain the margin adjustment for the second child */
         .form-description div:nth-child(2) {
-            margin-top: 20px; /* Additional margin for the second div */
+            margin-top: 20px; 
         }
 
         @media (max-width: 768px) {
-            .iframe-container, .form-description {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            iframe, .form-description div {
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-
-            .form-description div {
-                font-size: 1.5em;
-            }
+      .iframe-container, .form-description {
+            flex-direction: column;
+            align-items: center;
         }
+
+        iframe, .form-description div {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .form-description div {
+            font-size: 1.5em;
+        }
+    }
     </style>
 </head>
 <body>
