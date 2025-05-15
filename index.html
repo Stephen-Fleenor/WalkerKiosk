@@ -61,7 +61,6 @@
         .form-description div:nth-child(2) {
             margin-top: 20px; 
         }
-        
         @media (max-width: 768px) {
             body, .iframe-container, .form-description, iframe, .form-description div {
                 flex-direction: column;
@@ -73,6 +72,23 @@
             }
         }
     </style>
+    <script>
+        let idleTime = 5 * 60 * 1000; // 5 minutes
+        let idleTimer;
+
+        function resetIdleTimer() {
+            clearTimeout(idleTimer);
+            idleTimer = setTimeout(() => {
+                window.location.reload(true); // hard refresh
+            }, idleTime);
+        }
+
+        ['mousemove', 'mousedown', 'keypress', 'touchstart', 'scroll'].forEach(event => {
+            window.addEventListener(event, resetIdleTimer, false);
+        });
+
+        window.onload = resetIdleTimer;
+    </script>
 </head>
 <body>
     <div class="logo-header">
@@ -88,3 +104,4 @@
     </div>
 </body>
 </html>
+
