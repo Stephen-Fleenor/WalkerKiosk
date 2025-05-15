@@ -76,37 +76,21 @@
         let idleTime = 5 * 60 * 1000; // 5 minutes
         let idleTimer;
 
+        const msFormBase = "https://forms.office.com/Pages/ResponsePage.aspx?id=Q3-SLcijuUG-Hm7U1ru5fsNVKv7Vky1Lg3ugpkNc7GpUNTFZTDA0R0pFSkpCTFQ4TzVFRDM0QUcxVi4u&embed=true";
+        const docusignBase = "https://powerforms.docusign.net/65691a2e-8a97-4672-a4d0-4dfe93a0babb?env=na3&acct=5cea2cf0-f181-4295-96a0-014a20ab64a7&accountId=5cea2cf0-f181-4295-96a0-014a20ab64a7";
+
         function resetIdleTimer() {
             clearTimeout(idleTimer);
             idleTimer = setTimeout(() => {
                 const timestamp = "&t=" + new Date().getTime();
 
-                // Replace Microsoft Form iframe with a new one
-                const formContainer = document.getElementById('formContainer');
-                if (formContainer) {
-                    const newForm = document.createElement('iframe');
-                    newForm.id = "formFrame";
-                    newForm.src = "https://forms.office.com/Pages/ResponsePage.aspx?id=Q3-SLcijuUG-Hm7U1ru5fsNVKv7Vky1Lg3ugpkNc7GpUNTFZTDA0R0pFSkpCTFQ4TzVFRDM0QUcxVi4u&embed=true";
-                    newForm.setAttribute("frameborder", "0");
-                    newForm.setAttribute("allowfullscreen", "");
-                    newForm.setAttribute("webkitallowfullscreen", "");
-                    newForm.setAttribute("mozallowfullscreen", "");
-                    newForm.setAttribute("msallowfullscreen", "");
-                    formContainer.innerHTML = ""; // Clear the old iframe
-                    formContainer.appendChild(newForm);
-                }
+                const msForm = document.getElementById("formFrame");
+                if (msForm) msForm.src = msFormBase + timestamp;
 
-                // Refresh DocuSign iframe
-                const docusignIframe = document.getElementById('docusignFrame');
-                if (docusignIframe) {
-                    const baseSrc = "https://powerforms.docusign.net/65691a2e-8a97-4672-a4d0-4dfe93a0babb?env=na3&acct=5cea2cf0-f181-4295-96a0-014a20ab64a7&accountId=5cea2cf0-f181-4295-96a0-014a20ab64a7";
-                    docusignIframe.src = baseSrc + timestamp;
-                }
+                const docusign = document.getElementById("docusignFrame");
+                if (docusign) docusign.src = docusignBase + timestamp;
 
-                // Optional: Reload page shortly after (if you want to ensure everything is reinitialized)
-                setTimeout(() => {
-                    window.location.reload(true);
-                }, 100);
+                // No full-page reload
             }, idleTime);
         }
 
@@ -126,10 +110,9 @@
         <div>To access employee-only areas, additionally complete the DocuSign NDA.</div>
     </div>
     <div class="iframe-container">
-        <div id="formContainer" style="width:49%;">
-            <iframe id="formFrame" src="https://forms.office.com/Pages/ResponsePage.aspx?id=Q3-SLcijuUG-Hm7U1ru5fsNVKv7Vky1Lg3ugpkNc7GpUNTFZTDA0R0pFSkpCTFQ4TzVFRDM0QUcxVi4u&embed=true" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
-        </div>
+        <iframe id="formFrame" src="https://forms.office.com/Pages/ResponsePage.aspx?id=Q3-SLcijuUG-Hm7U1ru5fsNVKv7Vky1Lg3ugpkNc7GpUNTFZTDA0R0pFSkpCTFQ4TzVFRDM0QUcxVi4u&embed=true" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
         <iframe id="docusignFrame" src="https://powerforms.docusign.net/65691a2e-8a97-4672-a4d0-4dfe93a0babb?env=na3&acct=5cea2cf0-f181-4295-96a0-014a20ab64a7&accountId=5cea2cf0-f181-4295-96a0-014a20ab64a7" frameborder="0"></iframe>
     </div>
 </body>
 </html>
+
